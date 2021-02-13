@@ -792,4 +792,82 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">CtxConsumer</span></span><span class="token punctuation">></span></span>
            
         <span class="token punctuation">)</span>
-    <span class="token punctuation">}</span></code></pre></div></article></body></html>
+    <span class="token punctuation">}</span></code></pre><p id="9d5e4480-c3f3-406e-995b-e565d64f2bf8" class="">
+</p><h1 id="85754156-4965-408a-aab0-bda5e3c84334" class="">Styling</h1><p id="995626a8-3f5e-46d4-815e-84e77c80b03b" class="">standard import</p><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')</style><pre id="60ad6f72-9987-4ef7-a4aa-73da1d2efbf7" class="code"><code>import <span class="token string">'./App.css'</span><span class="token punctuation">;</span></code></pre><p id="a2e43b38-1be9-42b5-9906-0c3949b4b59f" class="">Use the class-name instead of traditional class in css</p><p id="3ba8e648-9707-4696-b22f-4643c22cc054" class="">In the css file, it will be same as traditional css. </p><p id="f2a0170f-9f54-4e09-92e9-b4cc6ae24e80" class="">You can also use javascript to do the styling, i.e., pass a jsx style object. </p><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')</style><pre id="f3e15137-c3b1-4deb-968f-710bb6f6d6a4" class="code"><code><span class="token keyword">const</span> pstyle <span class="token operator">=</span> <span class="token punctuation">{</span>
+  fontSize<span class="token operator">:</span><span class="token string">"2em"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+function <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Header info<span class="token operator">=</span><span class="token string">"my msg"</span> num<span class="token operator">=</span><span class="token string">"6"</span><span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>p style<span class="token operator">=</span><span class="token punctuation">{</span>pstyle<span class="token punctuation">}</span><span class="token operator">></span>Hello I am a para<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Footer myAlert<span class="token operator">=</span><span class="token punctuation">{</span>createAlert<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p id="6a1428d4-a190-42dc-bf9e-77715857b1b1" class="">
+</p><p id="884b1c59-0a08-43f3-9e10-0847228d916e" class="">A cool library to aid styling is styled-components</p><blockquote id="aa662dc5-7290-44e7-b76a-763ca5c3e8e1" class="">npm install --save styled-components</blockquote><p id="70df9b04-27cc-4415-908e-d3e3323803eb" class="">tip: might need to delete the package-lock.json if you are met with errors. Then run the command again.</p><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')</style><pre id="941d40ac-b0f7-4cb5-874b-810eba4e3693" class="code"><code>vconst para <span class="token operator">=</span> styled<span class="token punctuation">.</span>p`
+  font<span class="token operator">-</span>size<span class="token operator">:</span><span class="token number">2</span>em<span class="token punctuation">;</span>
+  color<span class="token operator">:</span>red<span class="token punctuation">;</span>
+`<span class="token punctuation">;</span>
+
+function <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Header info<span class="token operator">=</span><span class="token string">"my msg"</span> num<span class="token operator">=</span><span class="token string">"6"</span><span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>p style<span class="token operator">=</span><span class="token punctuation">{</span>pstyle<span class="token punctuation">}</span><span class="token operator">></span>Hello I am a para<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>para<span class="token operator">></span>Hi there<span class="token operator">&lt;</span><span class="token operator">/</span>para<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Footer myAlert<span class="token operator">=</span><span class="token punctuation">{</span>createAlert<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p id="756d13fe-b3a8-481d-bad0-e16386d8a3e7" class="">you basically created a custom tag called &quot;para&quot; and it is styling a html &quot;p&quot; tag. </p><p id="85593fae-a231-4384-8e20-c9b7d3743b67" class="">
+</p><h1 id="d61cced4-4ee6-4ca1-bfbf-770339b51260" class="">Hooks</h1><h3 id="b3e44bcb-f8e9-4fb2-8ee2-8f111709389f" class="">useState</h3><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')</style><pre id="8248f042-6a78-4533-9bff-d6f8e0cb565e" class="code"><code>import React<span class="token punctuation">,</span> <span class="token punctuation">{</span>useState<span class="token punctuation">}</span> from <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Numbers <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+		<span class="token comment">//this is by convention, you have a getter and setter</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>numbers<span class="token punctuation">,</span>setNumbers<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> addNum <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+				<span class="token comment">//...numbers means the entire numbers array retrieved by getter</span>
+        <span class="token function">setNumbers</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>numbers<span class="token punctuation">,</span><span class="token string">'4'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span><span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span>h1<span class="token operator">></span>Numbers<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+						<span class="token punctuation">{</span><span class="token comment">/* the {} just means injecting js into html */</span><span class="token punctuation">}</span>
+            <span class="token punctuation">{</span>numbers<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>num<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token operator">&lt;</span>h2<span class="token operator">></span><span class="token punctuation">{</span>num<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>addNum<span class="token punctuation">}</span><span class="token operator">></span>Add Number to list<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+export <span class="token keyword">default</span> Numbers<span class="token punctuation">;</span></code></pre><h3 id="9b740a00-6932-431c-aeea-2ea28d0f3e6f" class="">useEffect</h3><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')</style><pre id="03e36df3-f29d-4d4f-823b-990243cb7688" class="code"><code>import React<span class="token punctuation">,</span> <span class="token punctuation">{</span>useState<span class="token punctuation">,</span>useEffect<span class="token punctuation">}</span> from <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Numbers <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>numbers<span class="token punctuation">,</span>setNumbers<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> addNum <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+        <span class="token function">setNumbers</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>numbers<span class="token punctuation">,</span><span class="token string">'4'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"caught"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>addNum<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span><span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span>h1<span class="token operator">></span>Numbers<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+            <span class="token punctuation">{</span><span class="token comment">/* the {} just means injecting js into html */</span><span class="token punctuation">}</span>
+            <span class="token punctuation">{</span>numbers<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>num<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token operator">&lt;</span>h2<span class="token operator">></span><span class="token punctuation">{</span>num<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>addNum<span class="token punctuation">}</span><span class="token operator">></span>Add Number to list<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+export <span class="token keyword">default</span> Numbers<span class="token punctuation">;</span></code></pre><p id="112c993e-7396-4ef0-a136-d640b37fb4b8" class="">It is used to catch events. It is powerful because it can catch any desired changes and trigger functions to respond to them</p></div></article></body></html>
