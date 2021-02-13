@@ -1,2 +1,2 @@
 #### React Notes
-[Intro](https://mightnent.github.io/learnreact.io/docs/intro.html)
+[Intro](https://mightnent.github.io/learnreact/docs/intro.html)
