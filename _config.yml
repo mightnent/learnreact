@@ -4,5 +4,7 @@ relative_links:
   enabled: true
   collections: true
   
-markdown: kramdown
-mathjax: true
+github:
+  is_project_page: false
+  
+title: Learn React.js
